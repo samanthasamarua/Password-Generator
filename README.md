@@ -1,8 +1,8 @@
-# 03 JavaScript: Password Generator
+# JavaScript: Password Generator
 
 # Description: 
 
-This project involved modifying starter code to create an application that enables employees to generate random passwords based on a the selected criteria. 
+This project involved modifying starter code to create an application that enables employees to generate random passwords based on a selected criteria. 
 
 # Modifications Listed:
 
