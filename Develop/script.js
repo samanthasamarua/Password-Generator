@@ -64,10 +64,35 @@ const Criteria = {
   return "";
  }
 
+ // Password Criteria Loop - Generate password based on selected criteria above
+ for (let i = 0; i < length; i++) {
+  let randomIndex = Math.floor(Math.random() * characters.length);
+  password += characters.charAt(randomIndex);
 }
 
-// Write password to the #password input
+return password;
+
+}
+
+// Function to ensure user inputs a valid password
 function writePassword() {
+
+// Implemented loop to ensure user enters a valid password length
+  let length;
+
+  do {
+    length = prompt("Choose the length of your password (This needs to be between " + minLength + " and " + maxLength + " characters):");
+
+    if (isNaN(length) || length < minLength || length > maxLength) {
+      alert("Please enter a valid password length between " + minLength + " and " + maxLength + " characters");
+    }
+  } while (isNaN(length) || length < minLength || length > maxLength);
+
+// Generate Password in the user interface 
+  let password = generatePassword(length);
+  let passwordText = document.querySelector("#password");
+  
+  passwordText.value = password;
 }
 
 // Add event listener to generate button
